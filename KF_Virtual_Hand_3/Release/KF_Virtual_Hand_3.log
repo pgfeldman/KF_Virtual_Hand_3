@@ -1,0 +1,39 @@
+﻿Build started 9/30/2013 1:39:12 PM.
+     1>Project "C:\Phil\MSVC Dev\KF_Virtual_Hand_3\KF_Virtual_Hand_3\KF_Virtual_Hand_3.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\KF_Virtual_Hand_3.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\GLEW.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.include" /I"C:\Phil\MSVC Dev\FltkShaderSupportDll\FltkShaderSupportDll" /I"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\PhidgetsHeaders" /I"C:\Phil\MSVC Dev\MultichannelOr3dAudio\DxAudioInterfaceLibrary\include" /I"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\\Include" /I"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\KF_Phantom" /I"C:\rapidxml-1.13" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\KF_Virtual_Hand_3.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt KF_Virtual_Hand_3.cpp
+         KF_Virtual_Hand_3.cpp
+     1>KF_Virtual_Hand_3.cpp(90): warning C4018: '<' : signed/unsigned mismatch
+     1>KF_Virtual_Hand_3.cpp(185): warning C4800: 'char' : forcing value to bool 'true' or 'false' (performance warning)
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Virtual_Hand_3.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\FLTK.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\GLEW.lib" /LIBPATH:"C:\Phil\MSVC Dev\FltkShaderSupportDll\OGL_SB.lib" /LIBPATH:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\PhidgetsLibs\x86" /LIBPATH:"C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86" /LIBPATH:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\OpenHaptics_3.1_lib\Win32\ReleaseAcademicEdition" /LIBPATH:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release" opengl32.lib glu32.lib WSOCK32.LIB gltools.lib fltk.lib fltkgl.lib FltkShaderSupportLib.lib phidget21.lib DxAudioInterfaceStatic.lib wsock32.lib winmm.lib dxerr.lib X3DAudio.lib comctl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\KF_Virtual_Hand_3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Virtual_Hand_3.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Virtual_Hand_3.lib" /MACHINE:X86 Release\SharedMemoryManager.obj
+         Release\fileChooser.obj
+         Release\GoalBox.obj
+         Release\Gripper.obj
+         Release\handControl3_UI.obj
+         Release\KF_Hand_Window.obj
+         Release\KF_Virtual_Hand_3.obj
+         Release\PhidgetsController.obj
+         Release\SimpleSphere.obj
+         Release\stdafx.obj
+         Release\TargetSphere.obj
+         Release\TestManager.obj
+         Release\TestResult.obj
+         Release\UI_cmd.obj /LTCG 
+     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+         KF_Virtual_Hand_3.vcxproj -> C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Virtual_Hand_3.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Virtual_Hand_3.exe;#1" /manifest Release\KF_Virtual_Hand_3.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\KF_Virtual_Hand_3.unsuccessfulbuild".
+         Touching "Release\KF_Virtual_Hand_3.lastbuildstate".
+     1>Done Building Project "C:\Phil\MSVC Dev\KF_Virtual_Hand_3\KF_Virtual_Hand_3\KF_Virtual_Hand_3.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.25

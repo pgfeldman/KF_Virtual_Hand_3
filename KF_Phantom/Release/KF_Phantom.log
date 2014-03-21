@@ -1,0 +1,42 @@
+﻿Build started 9/18/2013 11:39:38 AM.
+     1>Project "C:\Phil\MSVC Dev\KF_Virtual_Hand_3\KF_Phantom\KF_Phantom.vcxproj" on node 4 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Release\KF_Phantom.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Release\KF_Phantom.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\OpenHaptics_3.1_include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\KF_Phantom.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\OpenHaptics_3.1_include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\KF_Phantom.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BaseGeometryPatch.cpp KF_Phantom.cpp SharedMemoryManager.cpp
+         BaseGeometryPatch.cpp
+     1>BaseGeometryPatch.cpp(32): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\conio.h(128) : see declaration of 'getch'
+         KF_Phantom.cpp
+     1>KF_Phantom.cpp(74): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\conio.h(130) : see declaration of 'kbhit'
+     1>KF_Phantom.cpp(79): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+         SharedMemoryManager.cpp
+     1>SharedMemoryManager.cpp(34): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\wchar.h(988) : see declaration of 'wcscpy'
+     1>SharedMemoryManager.cpp(72): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\wchar.h(988) : see declaration of 'wcscpy'
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Phantom.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\OpenHaptics_3.1_lib\Win32\ReleaseAcademicEdition" /LIBPATH:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\OpenHaptics_3.1_lib\utilities\lib\Win32\ReleaseAcademicEdition" hd.lib hdu.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\KF_Phantom.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Phantom.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Phantom.lib" /MACHINE:X86 Release\BaseGeometryPatch.obj
+         Release\KF_Phantom.obj
+         Release\SharedMemoryManager.obj
+         Release\stdafx.obj
+         Generating code
+         Finished generating code
+     1>hdu.lib(hduError.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'hdu.lib(hduError.obj)' or at 'C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\vc100.pdb'; linking object as if no debug info
+         KF_Phantom.vcxproj -> C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Phantom.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Phil\MSVC Dev\KF_Virtual_Hand_3\Release\KF_Phantom.exe;#1" /manifest Release\KF_Phantom.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Release\KF_Phantom.unsuccessfulbuild".
+         Touching "Release\KF_Phantom.lastbuildstate".
+     1>Done Building Project "C:\Phil\MSVC Dev\KF_Virtual_Hand_3\KF_Phantom\KF_Phantom.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.44

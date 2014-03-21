@@ -1,0 +1,239 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0300 
+header_name {.h} 
+code_name {.cxx}
+comment {\#include "stdafx.h"} {in_source not_in_header
+} 
+
+class HandControlUI {open
+} {
+  Function {HandControlUI()} {open
+  } {
+    Fl_Window mainWindow {
+      label {Hand Control UI (Version 8.26.13)} open
+      xywh {40 31 919 662} type Double box THIN_UP_BOX resizable
+      code0 {\#include "UI_cmd.h"} visible
+    } {
+      Fl_Box handView {
+        label {3D View}
+        xywh {10 60 580 500} box ENGRAVED_FRAME resizable
+        code0 {\#include "KF_Hand_Window.h"}
+        class KF_Hand_Window
+      }
+      Fl_Group {} {
+        label Sensitivity
+        xywh {12 578 323 76} box ENGRAVED_FRAME labelsize 12 align 5
+      } {
+        Fl_Value_Slider greenSensitivity {
+          label Green
+          user_data handView
+          callback {handView->getGripper()->setEffectorScalar(Gripper::GREEN, o->value());}
+          xywh {70 588 250 23} type {Horz Knob} align 4 value 0.4 textsize 14
+        }
+        Fl_Value_Slider redSensitivity {
+          label Red
+          user_data handView
+          callback {handView->getGripper()->setEffectorScalar(Gripper::RED, o->value());}
+          xywh {70 622 250 23} type {Horz Knob} align 4 value 0.4 textsize 14
+        }
+      }
+      Fl_Group setup {
+        label Setup open
+        xywh {600 75 305 230} box UP_BOX labelsize 12 align 5
+      } {
+        Fl_Input researcherNameInput {
+          label {Reseacher :}
+          xywh {745 82 150 24}
+        }
+        Fl_Input subjectNameInput {
+          label {Subject :}
+          xywh {745 111 150 24}
+        }
+        Fl_Input subjectAgeInput {
+          label {Subject Age :}
+          xywh {745 141 150 24}
+        }
+        Fl_Choice subjectGender {
+          label {Gender :} open
+          xywh {745 170 150 25} down_box BORDER_BOX
+        } {
+          MenuItem male {
+            label Male
+            xywh {10 10 30 20}
+          }
+          MenuItem female {
+            label Female
+            xywh {10 10 30 20}
+          }
+        }
+        Fl_Value_Input seedInput {
+          label {Seed:}
+          xywh {745 202 150 24}
+        }
+        Fl_Value_Input sessionInput {
+          label {Sessions:}
+          xywh {745 232 150 24} value 1
+        }
+        Fl_Choice testTypeCombo {
+          label {Test Type :}
+          callback {cmd->set("testType", NULL);} open
+          xywh {745 265 150 24} down_box BORDER_BOX
+        } {
+          MenuItem noFeedback {
+            label {No Feedback}
+            xywh {0 0 30 20}
+          }
+          MenuItem hapticOnly {
+            label Haptic
+            xywh {20 20 30 20}
+          }
+          MenuItem tactorOnly {
+            label Tactor
+            xywh {20 20 30 20}
+          }
+          MenuItem hapticAndTactor {
+            label {Haptic and Tactor}
+            xywh {10 10 30 20}
+          }
+          MenuItem hapticAndTactorAndNone {
+            label All
+            xywh {20 20 30 20}
+          }
+        }
+      }
+      Fl_Menu_Bar {} {
+        xywh {0 0 920 25}
+      } {
+        Submenu {} {
+          label File open
+          xywh {10 10 62 20}
+        } {
+          MenuItem saveSetupFile {
+            label {Save Setup File}
+            callback {cmd->set("saveSetup", NULL);}
+            xywh {10 10 30 20}
+          }
+          MenuItem openFile {
+            label {Open Setup File}
+            callback {cmd->set("openFile", NULL);}
+            xywh {20 20 30 20}
+          }
+          MenuItem singleSoundChoice {
+            label {Add Single Sound}
+            callback {cmd->set("singleSoundChoice", NULL);}
+            xywh {20 20 30 20}
+          }
+          MenuItem closeAll {
+            label Exit
+            user_data {"Close Info"}
+            callback {cmd->set("close", NULL);}
+            xywh {10 10 30 20}
+          }
+        }
+      }
+      Fl_Group {} {
+        label Current open
+        xywh {600 358 310 202} box THIN_UP_BOX labelsize 12 align 5
+      } {
+        Fl_Output curOpenLoopOutput {
+          label {Open Loop Test :}
+          xywh {750 365 150 25} color 29
+        }
+        Fl_Output curHapticOutput {
+          label {Haptic Test :}
+          xywh {750 395 150 25} color 29
+        }
+        Fl_Output curTactorOutput {
+          label {Tactor Test :}
+          xywh {750 425 150 25} color 29
+        }
+        Fl_Output curHapticTactorOutput {
+          label {Haptic Tactor Test :}
+          xywh {750 455 150 25} color 29
+        }
+        Fl_Choice soundChoice {
+          label {Sounds :} open
+          xywh {745 513 150 25} down_box BORDER_BOX
+        } {}
+      }
+      Fl_Button startButton {
+        label Start
+        callback {cmd->set("start", NULL);}
+        xywh {825 630 85 25}
+      }
+      Fl_Button nextButton {
+        label Next
+        callback {cmd->set("next", NULL);}
+        xywh {825 565 85 60} shortcut 0x20
+      }
+      Fl_Output testDirections {
+        label {Directions:}
+        xywh {80 30 825 25} color 29
+      }
+      Fl_Group constrainTargetCheck {
+        label Environment open
+        xywh {345 580 470 75} box THIN_UP_BOX labelsize 12 align 5
+      } {
+        Fl_Value_Input xmin {
+          label {x min:}
+          xywh {390 586 50 18} labelsize 12 minimum -500 maximum 500 value -200
+        }
+        Fl_Value_Input ymin {
+          label {y min:}
+          xywh {390 607 50 18} labelsize 12 minimum -500 maximum 500 value -100
+        }
+        Fl_Value_Input zmin {
+          label {z min:}
+          xywh {390 627 50 18} labelsize 12 minimum -500 maximum 500 value -100
+        }
+        Fl_Value_Input xmax {
+          label {x max:}
+          xywh {485 587 50 18} labelsize 12 minimum -500 maximum 500 value 200
+        }
+        Fl_Value_Input ymax {
+          label {y max:}
+          xywh {485 607 50 18} labelsize 12 minimum -500 maximum 500 value 150
+        }
+        Fl_Value_Input zmax {
+          label {z max:}
+          xywh {485 627 50 18} labelsize 12 minimum -500 maximum 500 value 10
+        }
+        Fl_Value_Input targetSphereMin {
+          label {sphere min:}
+          xywh {615 587 50 18} labelsize 12 maximum 100 value 20
+        }
+        Fl_Value_Input targetSphereMax {
+          label {sphere max:}
+          xywh {615 607 50 18} labelsize 12 maximum 100 value 25
+        }
+        Fl_Value_Input goalBoxSize {
+          label {goal box size}
+          xywh {755 587 50 18} labelsize 12 maximum 100 value 30
+        }
+        Fl_Button setEnvButton {
+          label Set
+          callback {cmd->set("env", NULL);}
+          xywh {740 630 64 20}
+        }
+        Fl_Check_Button constrainTargetsCheck {
+          label constrainTargets
+          callback {cmd->set("env", NULL);} selected
+          xywh {613 633 64 15} down_box DOWN_BOX labelsize 12
+        }
+      }
+    }
+  }
+  Function {show(int argc, char **argv)} {open
+  } {
+    code {mainWindow->show(argc, argv);
+greenSensitivity->value(0.23);
+redSensitivity->value(0.23);} {}
+  }
+  decl {UI_cmd *cmd;} {private local
+  }
+  Function {setCmdPtr(UI_cmd *pCmd)} {return_type void
+  } {
+    code {cmd = pCmd;
+printf("cmd pointers set\\n");} {}
+  }
+} 
